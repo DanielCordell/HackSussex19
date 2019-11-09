@@ -7,8 +7,9 @@ public class Bullet : MonoBehaviour
 
     public float speed = 5f;
     public float damage = 10f;
-    PlayerShoot.Direction direction ;
-    public Collider Collider;
+    PlayerShoot.Direction direction;
+    public Collider playerCollider;
+
     public void getDirection(PlayerShoot.Direction _direction)
     {
         direction = _direction;
@@ -45,6 +46,11 @@ public class Bullet : MonoBehaviour
         {
             collision.collider.GetComponent<EnemyStats>().takeDamage(damage);
             Destroy(gameObject);
+        }
+
+        if (collision.collider.tag == "Bullet")
+        {
+            Physics.IgnoreCollision(gameObject.GetComponent<Collider>(), collision.collider, true);
         }
 
         if(collision.collider.tag == "Wall")

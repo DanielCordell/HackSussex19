@@ -79,6 +79,7 @@ public class PlayerShoot : MonoBehaviour
             {
                 GameObject bullet = (GameObject)Instantiate(bulletPrefab, pointToShoot.position, Quaternion.identity);
                 bullet.GetComponent<Bullet>().getDirection(ShootDirection);
+                Physics.IgnoreCollision(gameObject.GetComponent<Collider>(), bullet.GetComponent<Collider>(), true);
             }
                
             //bullet.set
