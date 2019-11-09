@@ -17,26 +17,33 @@ public class Bullet : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(direction == PlayerShoot.Direction.UP)
+        Vector3 velocity = Vector3.zero;
+
+        if (direction == PlayerShoot.Direction.LEFT)  // If the player is pressing the "d" key
         {
-            transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.World);
+            // Add a force to the right
+            velocity += Vector3.left * Time.deltaTime;
         }
 
-        if (direction == PlayerShoot.Direction.DOWN)
+        if (direction == PlayerShoot.Direction.RIGHT)  // If the player is pressing the "a" key
         {
-            transform.Translate(Vector3.back * speed * Time.deltaTime, Space.World);
+            // Add a force to the left
+            velocity += Vector3.right * Time.deltaTime;
         }
 
-        if (direction == PlayerShoot.Direction.LEFT)
+        if (direction == PlayerShoot.Direction.UP)  // If the player is pressing the "d" key
         {
-            transform.Translate(Vector3.left * speed * Time.deltaTime, Space.World);
+            // Add a force to the right
+            velocity += Vector3.forward * Time.deltaTime;
         }
 
-        if (direction == PlayerShoot.Direction.RIGHT)
+        if (direction == PlayerShoot.Direction.DOWN)  // If the player is pressing the "a" key
         {
-            transform.Translate(Vector3.right * speed * Time.deltaTime, Space.World);
+            // Add a force to the left
+            velocity += Vector3.back * Time.deltaTime;
         }
 
+        GetComponent<Rigidbody>().velocity = velocity.normalized * speed;
     }
 
 

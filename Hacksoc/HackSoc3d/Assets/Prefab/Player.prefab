@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef430d87a35ece040ad8a0bc996c67b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartSpeed: 5
+  StartSpeed: 50
   speed: 0
 --- !u!114 &665437890
 MonoBehaviour:
@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1233e9af93509b04594842c93fd40348, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rateOfFire: 10
+  rateOfFire: 5
   pointToShoot: {fileID: 21153095}
   bulletPrefab: {fileID: 6854620523167089905, guid: 5e8eecebd5389444c8aee7379e8947e1,
     type: 3}

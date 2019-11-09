@@ -386,7 +386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1401d7c22fe1b564f9ce90683ae87cb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 6659356110371030911, guid: 18f33b5658b76c54b975ff9088bb4800, type: 3}
+  player: {fileID: 284302679}
   offset: {x: 0, y: 20, z: 0}
   delay: 0.1
   speed: 10
@@ -560,7 +560,12 @@ PrefabInstance:
       propertyPath: m_Interpolate
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1210182967, guid: 18f33b5658b76c54b975ff9088bb4800, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1210182967, guid: 18f33b5658b76c54b975ff9088bb4800, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 18f33b5658b76c54b975ff9088bb4800, type: 3}
 --- !u!4 &1120650600 stripped
 Transform:
