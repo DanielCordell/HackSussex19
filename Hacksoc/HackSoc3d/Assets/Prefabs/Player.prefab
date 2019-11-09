@@ -264,4 +264,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startHealth: 3
   iFrames: 1
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 5871772716265491016, guid: 885f7ff68c49cce40afed3293919a059,
+    type: 3}
