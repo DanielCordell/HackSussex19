@@ -105,10 +105,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 248d57af258843c4498f60d95c6a00f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
+  speed: 20
   damage: 35
-  playerCollider: {fileID: 65674371842804684, guid: 18f33b5658b76c54b975ff9088bb4800,
-    type: 3}
+  Collider: {fileID: 6854620523167089870}
 --- !u!54 &54780630820166298
 Rigidbody:
   m_ObjectHideFlags: 0
