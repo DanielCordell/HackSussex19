@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Player Attributes")]
     public float playerSpeed = 5f;
+    public float playerHealth = 100f;
 
     public Rigidbody2D rb;
 
