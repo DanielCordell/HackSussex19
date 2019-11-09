@@ -51,11 +51,6 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.collider.tag == "Enemy")
-        {
-            collision.collider.GetComponent<EnemyStats>().takeDamage(baseDamage);
-            Destroy(gameObject);
-        }
 
         if (collision.collider.tag == "Bullet")
         {
@@ -66,7 +61,7 @@ public class Bullet : MonoBehaviour
 
         if (collision.collider.tag == "Enemy")
         {
-            collision.collider.GetComponent<EnemyStats>().takeDamage(damage);
+            collision.collider.GetComponent<EnemyStats>().takeDamage(baseDamage);
             playEffect();
             Destroy(gameObject);
         }
