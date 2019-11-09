@@ -11,7 +11,7 @@ public  class PlayerStats : MonoBehaviour
     public static int health;
     public static float playerSpeed;
 
-    public GameObject healthBar;
+    private GameObject healthBar;
     // Start is called before the first frame update
 
     private float timeRemaining;
@@ -21,6 +21,7 @@ public  class PlayerStats : MonoBehaviour
     {
         health = startHealth;
         beenHit = false;
+        healthBar = GameObject.Find("HealthBarPlayer");
     }
 
     // Update is called once per frame

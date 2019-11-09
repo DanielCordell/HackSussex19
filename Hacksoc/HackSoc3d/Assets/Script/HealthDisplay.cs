@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.UI;
 public class HealthDisplay : MonoBehaviour
@@ -20,7 +20,8 @@ public class HealthDisplay : MonoBehaviour
         Debug.Log(PlayerStats.health);
         for(int i = 0; i< currentHealth; i++)
         {
-            healthBoxes.Add((GameObject)Instantiate(healthBoxPrefab, transform));
+            healthBoxes.Add(Instantiate(healthBoxPrefab, transform));
+            Debug.Log("test:" + healthBoxes.Count);
         }
     }
 
