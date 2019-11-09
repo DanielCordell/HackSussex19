@@ -63,13 +63,12 @@ public class Bullet : MonoBehaviour
         {
             collision.collider.GetComponent<EnemyStats>().takeDamage(damage);
             playEffect();
-            Destroy(gameObject);
         }
 
 
         if(collision.collider.tag == "Wall")
         {
-            Destroy(gameObject);
+            playEffect();
         }
 
 
