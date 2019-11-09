@@ -20,20 +20,22 @@ public class EnemyMovement : MonoBehaviour
     {
         Vector3 dir = player.position - transform.position;
         float distanceThisFrame = speed * Time.deltaTime;
-
-        if(dir.magnitude <= distanceThisFrame)
-        {
-            HitPlayer();
-        }
-
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
     }
 
-
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.collider.tag == "Player")
+        {
+            HitPlayer();
+        }
+    }
 
     private void HitPlayer()
     {
-        Debug.Log("PlayerHit");
+        player.GetComponent<PlayerStats>().takeDamage();
+            
     }
-}
 
+
+}
