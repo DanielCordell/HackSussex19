@@ -5,8 +5,8 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
 
-    public float speed = 5f;
-    public float damage = 10f;
+    public float baseSpeed = 50f;
+    public float baseDamage = 10f;
     PlayerShoot.Direction direction;
     public Collider playerCollider;
 
@@ -43,7 +43,7 @@ public class Bullet : MonoBehaviour
             velocity += Vector3.back * Time.deltaTime;
         }
 
-        GetComponent<Rigidbody>().velocity = velocity.normalized * speed;
+        GetComponent<Rigidbody>().velocity = velocity.normalized * baseSpeed;
     }
 
 
@@ -51,7 +51,7 @@ public class Bullet : MonoBehaviour
     {
         if(collision.collider.tag == "Enemy")
         {
-            collision.collider.GetComponent<EnemyStats>().takeDamage(damage);
+            collision.collider.GetComponent<EnemyStats>().takeDamage(baseDamage);
             Destroy(gameObject);
         }
 

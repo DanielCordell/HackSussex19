@@ -20,6 +20,14 @@ public class CameraController : MonoBehaviour
       
     [SerializeField]
     public float speed = 10;
+
+    public Vector3 unshakenPosition;
+
+    // Desired duration of the shake effect
+    public float shakeDuration = 0f;
+  
+    // A measure of how quickly the shake effect should evaporate
+    public float dampingSpeed = 1.0f;
       
 
     private Queue<PointInSpace> pointsInSpace = new Queue<PointInSpace>();
@@ -33,5 +41,24 @@ public class CameraController : MonoBehaviour
         {
             transform.position = Vector3.Lerp( transform.position, pointsInSpace.Dequeue().Position + offset, Time.deltaTime * speed);
         }
+        unshakenPosition = transform.position;
+        
+        // Shaking
+        if (shakeDuration > 0)
+        {
+            transform.localPosition += Random.insideUnitSphere / 4;
+   
+            shakeDuration -= Time.deltaTime * dampingSpeed;
+        }
+        else
+        {
+            shakeDuration = 0f;
+            transform.localPosition = unshakenPosition;
+        }
+    }
+
+
+    public void TriggerShake() {
+        shakeDuration = 0.2f;
     }
 }

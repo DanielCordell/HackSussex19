@@ -449,6 +449,7 @@ GameObject:
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
   - component: {fileID: 534669906}
+  - component: {fileID: 534669907}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -533,9 +534,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 6659356109606456210}
-  offset: {x: 0, y: 20, z: 0}
+  offset: {x: 0, y: 40, z: -25}
   delay: 0.1
   speed: 10
+--- !u!114 &534669907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037097a8c5d119a4ca1a42091c7a645f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeDuration: 0
+  dampingSpeed: 1
 --- !u!1001 &871392617
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -603,16 +618,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7815867746546796058, guid: c239991fb5fe2f349b49665a7c033971,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 116
-      objectReference: {fileID: 0}
     - target: {fileID: 7815867746546796057, guid: c239991fb5fe2f349b49665a7c033971,
         type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 6659356109606456213}
+    - target: {fileID: 7815867746546796058, guid: c239991fb5fe2f349b49665a7c033971,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 116
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c239991fb5fe2f349b49665a7c033971, type: 3}
 --- !u!4 &1120650600 stripped
