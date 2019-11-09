@@ -10,6 +10,8 @@ public class Bullet : MonoBehaviour
     PlayerShoot.Direction direction;
     public Collider playerCollider;
 
+    public GameObject ImpactEffect;
+
     public void getDirection(PlayerShoot.Direction _direction)
     {
         direction = _direction;
@@ -60,10 +62,27 @@ public class Bullet : MonoBehaviour
             Physics.IgnoreCollision(gameObject.GetComponent<Collider>(), collision.collider, true);
         }
 
+
+
+        if (collision.collider.tag == "Enemy")
+        {
+            collision.collider.GetComponent<EnemyStats>().takeDamage(damage);
+            playEffect();
+            Destroy(gameObject);
+        }
+
+
         if(collision.collider.tag == "Wall")
         {
             Destroy(gameObject);
         }
 
+
+        void playEffect(){
+            GameObject effectObject = (GameObject)Instantiate(ImpactEffect, transform.position, Quaternion.identity);
+            Destroy(effectObject, 2f);
+            Destroy(gameObject);
+            
+        }
     }
 }
