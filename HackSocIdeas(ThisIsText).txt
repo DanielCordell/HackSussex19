@@ -1,0 +1,14 @@
+UNITY PROJECT - HACKSOC
+game using twilio to cuck the player.
+3D/2.5D game downloaded assets.
+
+using twilio - twilio affect attributes of the game, spawn in entities,
+accept a request, tell player the implemented effect.
+
+style - the style
+
+possible spawn in prefabs.
+
+
+Game Ideas - bullet hell, 2d platformer, builder (simple), rogue like? (2D tiles, wall tile with collision).
+
