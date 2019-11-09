@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    [Header("Movement Params")]
-    public float StartSpeed = 500f;
+    [Header("Target")]
     public Transform player;
 
     [HideInInspector]
@@ -13,7 +12,7 @@ public class EnemyMovement : MonoBehaviour
 
     void Start()
     {
-        speed = StartSpeed;
+        speed = gameObject.GetComponent<EnemyStats>().startingSpeed;
 
     }
     // Update is called once per frame

@@ -26,25 +26,25 @@ public class PlayerMovement : MonoBehaviour
         {
 
             // Add a force to the right
-            transform.Translate(Vector3.left * speed * Time.deltaTime);
+            transform.Translate(Vector3.left * speed * Time.deltaTime, Space.World);
         }
 
         if (Input.GetKey(KeyCode.D))  // If the player is pressing the "a" key
         {
             // Add a force to the left
-            transform.Translate(Vector3.right * speed * Time.deltaTime);
+            transform.Translate(Vector3.right * speed * Time.deltaTime, Space.World);
         }
 
         if (Input.GetKey(KeyCode.W))  // If the player is pressing the "d" key
         {
             // Add a force to the right
-            transform.Translate(Vector3.forward * speed * Time.deltaTime);
+            transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.World);
         }
 
         if (Input.GetKey(KeyCode.S))  // If the player is pressing the "a" key
         {
             // Add a force to the left
-            transform.Translate(Vector3.back * speed * Time.deltaTime);
+            transform.Translate(Vector3.back * speed * Time.deltaTime, Space.World);
         }
 
     }
