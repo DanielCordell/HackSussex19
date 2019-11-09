@@ -11,8 +11,6 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector]
     public float speed;
 
-    public Rigidbody rb;
-    Vector3 movement;
      void Start()
     {
         speed = StartSpeed;
