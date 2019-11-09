@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     [Header("Target")]
-    public Transform player;
+    public GameObject player;
 
     [HideInInspector]
     public float speed;
@@ -18,7 +18,7 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 dir = player.position - transform.position;
+        Vector3 dir = player.transform.position - transform.position;
         float distanceThisFrame = speed * Time.deltaTime;
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
     }
