@@ -176,7 +176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireRate: 2
   damage: 20
-  radius: 0
+  radius: 0.75
   projectileSpeed: 75
   bulletPrefab: {fileID: 6854620523167089905, guid: 5e8eecebd5389444c8aee7379e8947e1,
     type: 3}

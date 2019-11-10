@@ -9,6 +9,7 @@ public class Bullet : MonoBehaviour
     private float damage;
     private float radius;
     private float projectileSpeed;
+    private float color;
 
     PlayerShoot.Direction direction;
     public Collider playerCollider;
@@ -21,6 +22,8 @@ public class Bullet : MonoBehaviour
         damage = _damage;
         radius = _radius;
         projectileSpeed = _projectileSpeed;
+        transform.localScale =new Vector3 (radius,radius,radius);
+
     }
 
     private void FixedUpdate()
