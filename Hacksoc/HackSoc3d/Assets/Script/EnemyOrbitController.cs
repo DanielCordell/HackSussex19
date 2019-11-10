@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyOrbitController : MonoBehaviour
 {
     [Header("Target")]
-    public GameObject player;
+    private GameObject player;
 
     [HideInInspector]
     public float speed;
@@ -16,7 +16,7 @@ public class EnemyOrbitController : MonoBehaviour
     void Start()
     {
         speed = gameObject.GetComponent<EnemyStats>().startingSpeed;
-
+        player = GameObject.Find("Player");
     }
     // Update is called once per frame
     void Update()

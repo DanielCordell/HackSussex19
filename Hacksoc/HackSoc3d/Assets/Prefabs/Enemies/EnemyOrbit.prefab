@@ -445,6 +445,8 @@ MonoBehaviour:
   startingSpeed: 10
   startingHealth: 100
   health: 0
+  deathEffect: {fileID: 5682492760947233391, guid: 3eecfff07eb864743ab4f02fda880eba,
+    type: 3}
   healthBar: {fileID: 2063717299889718103}
   nameText: {fileID: 2063717300547074046}
 --- !u!114 &7960785805852914181
@@ -459,7 +461,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: effb1cb53c0c7d543a22b877c3d1247d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 7725921045852188616, guid: 18f33b5658b76c54b975ff9088bb4800, type: 3}
   speed: 0
   orbitDistanceMax: 40
   orbitDistanceMin: 20
