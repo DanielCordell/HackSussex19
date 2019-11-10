@@ -27,6 +27,7 @@ public  class PlayerStats : MonoBehaviour
 
     }
 
+
     private void Start()
     {
         healthBar = GameObject.Find("HealthBarPlayer");
@@ -64,6 +65,22 @@ public  class PlayerStats : MonoBehaviour
             }
 
             timeRemaining -= Time.deltaTime;
+        }
+    }
+
+    private void UpdateWeapon(GameObject weapon)
+    {
+        Destroy(gun);
+        Debug.Log("pick");
+        gun = (GameObject)Instantiate(weapon, transform.Find("GunSpawn").transform);
+    }
+
+    public void PowerUpPickUp(GameObject item)
+    {
+        if(item.tag == "Weapon")
+        {
+            Debug.Log("pickedUp");
+            UpdateWeapon(item);
         }
     }
 
