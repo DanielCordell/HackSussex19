@@ -12,6 +12,7 @@ public class GameOver : MonoBehaviour
     }
     public void GameOverMethod()
     {
+        Debug.Log("GAMEOVER");
         GameOverCanvas.SetActive(true);
         Time.timeScale = 0;
     } 

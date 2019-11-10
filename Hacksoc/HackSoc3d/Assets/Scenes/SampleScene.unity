@@ -579,6 +579,8 @@ GameObject:
   - component: {fileID: 546718163}
   - component: {fileID: 546718162}
   - component: {fileID: 546718161}
+  - component: {fileID: 546718165}
+  - component: {fileID: 546718166}
   m_Layer: 5
   m_Name: GameOverScreen
   m_TagString: Untagged
@@ -666,6 +668,37 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!95 &546718165
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546718160}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2f8d53e3497758b4789a30860bbb25d3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!225 &546718166
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546718160}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &591927936
 GameObject:
   m_ObjectHideFlags: 0
@@ -768,7 +801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92cffe0a25dfa4e4a92d2fd8e836b084, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameOverCanvas: {fileID: 2114253766}
+  GameOverCanvas: {fileID: 546718160}
 --- !u!4 &651772822
 Transform:
   m_ObjectHideFlags: 0
@@ -1443,6 +1476,7 @@ GameObject:
   - component: {fileID: 2001764181}
   - component: {fileID: 2001764180}
   - component: {fileID: 2001764179}
+  - component: {fileID: 2001764182}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -1529,6 +1563,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001764177}
   m_CullTransparentMesh: 0
+--- !u!225 &2001764182
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001764177}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2114253766
 GameObject:
   m_ObjectHideFlags: 0
@@ -1541,7 +1587,7 @@ GameObject:
   - component: {fileID: 2114253769}
   - component: {fileID: 2114253768}
   m_Layer: 5
-  m_Name: GameOver
+  m_Name: GameOverText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
