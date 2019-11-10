@@ -8,9 +8,14 @@ public class EnemyBullet : MonoBehaviour
     private float projectileSpeed;
 
     Vector3 direction;
-    public Collider PlayerCollider;
+    public Collider playerCollider;
 
     public GameObject ImpactEffect;
+
+    void Start()
+    {
+        playerCollider = GameObject.Find("Player").GetComponent<Collider>();
+    } 
 
     public void setStats(Vector3 _direction, float _radius, float _projectileSpeed, Material material)
     {
