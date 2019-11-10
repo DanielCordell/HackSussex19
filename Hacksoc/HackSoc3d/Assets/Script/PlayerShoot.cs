@@ -6,10 +6,10 @@ public class PlayerShoot : MonoBehaviour
 {
     public enum Direction
     {
-        UP,
-        DOWN,
-        LEFT,
-        RIGHT
+        UP = 180,
+        DOWN = 360,
+        LEFT = 270,
+        RIGHT = 90
     }
 
     public float rateOfFire = 1f;

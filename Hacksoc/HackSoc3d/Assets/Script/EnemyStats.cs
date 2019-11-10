@@ -7,9 +7,9 @@ public class EnemyStats : MonoBehaviour
     public string enemyName = "enemy";
     public float startingSpeed = 20f;
     public float startingHealth = 100f;
-
+    [HideInInspector]
     public float health;
-
+    public GameObject deathEffect;
 
     public Image healthBar;
     public Text nameText;
@@ -25,8 +25,16 @@ public class EnemyStats : MonoBehaviour
         healthBar.fillAmount = health / startingHealth;
         if(health <= 0)
         {
-            Destroy(gameObject);
+            Die();
+
         }
+    }
+
+    void Die()
+    {
+        GameObject effectObject = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
+        Destroy(effectObject, 4f);
+        Destroy(gameObject);
     }
 
 }

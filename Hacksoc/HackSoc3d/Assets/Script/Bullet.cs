@@ -73,7 +73,7 @@ public class Bullet : MonoBehaviour
 
 
         void playEffect(){
-            GameObject effectObject = (GameObject)Instantiate(ImpactEffect, transform.position, Quaternion.identity);
+            GameObject effectObject = (GameObject)Instantiate(ImpactEffect, transform.position, Quaternion.Euler(0f,(int)direction*-1f, 0f));
             Destroy(effectObject, 2f);
             Destroy(gameObject);
             
