@@ -30,7 +30,7 @@ public class EnemyStats : MonoBehaviour
         }
     }
 
-    void Die()
+    public void Die()
     {
         GameObject effectObject = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(effectObject, 4f);
