@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameAdjuster : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class GameAdjuster : MonoBehaviour
     public Dictionary<string, int> commandCount = new Dictionary<string, int>();
 
     public List<string> names = new List<string>();
-
+    public Text display;
     public List<string> phrases = new List<string>();
 
     public float timeBetweenUpdates;
@@ -102,6 +103,12 @@ public class GameAdjuster : MonoBehaviour
         {
             currentTime -= Time.deltaTime * (1 / currentTimescale);
         }
+
+        display.text = ("slow: " + commandCount["slow"] + "\n" +
+    "fast: " + commandCount["fast"] + "\n" +
+     "kill: " + commandCount["kill"] + "\n" +
+       "bighead: " + commandCount["bighead"] + "\nTime Left:" + ((int)currentTime).ToString());
+
     }
 
     void performAction(string action)
