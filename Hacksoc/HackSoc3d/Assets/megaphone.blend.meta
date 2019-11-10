@@ -14,6 +14,12 @@ ModelImporter:
     100016: //RootNode
     100018: Sphere
     100020: Sphere_001
+    100022: Cube.001
+    100024: Cube.002
+    100026: Cube.003
+    100028: Cube.004
+    100030: Cylinder.001
+    100032: Sphere.001
     400000: Cone
     400002: Cube
     400004: Cube_001
@@ -25,6 +31,12 @@ ModelImporter:
     400016: //RootNode
     400018: Sphere
     400020: Sphere_001
+    400022: Cube.001
+    400024: Cube.002
+    400026: Cube.003
+    400028: Cube.004
+    400030: Cylinder.001
+    400032: Sphere.001
     2100000: Material_006
     2100002: Material_005
     2100004: Material_004
@@ -34,6 +46,15 @@ ModelImporter:
     2100012: Material_008
     2100014: Material_009
     2100016: Material_010
+    2100018: Material.006
+    2100020: Material.005
+    2100022: Material.004
+    2100024: Material.002
+    2100026: Material.003
+    2100028: Material.007
+    2100030: Material.008
+    2100032: Material.009
+    2100034: Material.010
     2300000: Cone
     2300002: Cube
     2300004: Cube_001
@@ -44,6 +65,12 @@ ModelImporter:
     2300014: Cylinder_001
     2300016: Sphere
     2300018: Sphere_001
+    2300020: Cube.001
+    2300022: Cube.002
+    2300024: Cube.003
+    2300026: Cube.004
+    2300028: Cylinder.001
+    2300030: Sphere.001
     3300000: Cone
     3300002: Cube
     3300004: Cube_001
@@ -54,6 +81,12 @@ ModelImporter:
     3300014: Cylinder_001
     3300016: Sphere
     3300018: Sphere_001
+    3300020: Cube.001
+    3300022: Cube.002
+    3300024: Cube.003
+    3300026: Cube.004
+    3300028: Cylinder.001
+    3300030: Sphere.001
     4300000: Sphere
     4300002: Cylinder_001
     4300004: Cube
@@ -64,6 +97,12 @@ ModelImporter:
     4300014: Cube_002
     4300016: Cube_003
     4300018: Cube_004
+    4300020: Cylinder.001
+    4300022: Cube.001
+    4300024: Sphere.001
+    4300026: Cube.002
+    4300028: Cube.003
+    4300030: Cube.004
     7400000: Default Take
     9500000: //RootNode
     2186277476908879412: ImportLogs

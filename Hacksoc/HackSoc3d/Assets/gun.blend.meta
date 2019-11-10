@@ -7,21 +7,26 @@ ModelImporter:
     100002: Cylinder
     100004: Cylinder_001
     100006: //RootNode
+    100008: Cylinder.001
     400000: Cube
     400002: Cylinder
     400004: Cylinder_001
     400006: //RootNode
+    400008: Cylinder.001
     2100000: Stock
     2100002: Gun
     2300000: Cube
     2300002: Cylinder
     2300004: Cylinder_001
+    2300006: Cylinder.001
     3300000: Cube
     3300002: Cylinder
     3300004: Cylinder_001
+    3300006: Cylinder.001
     4300000: Cube
     4300002: Cylinder
     4300004: Cylinder_001
+    4300006: Cylinder.001
     7400000: Default Take
     9500000: //RootNode
     2186277476908879412: ImportLogs

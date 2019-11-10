@@ -12,6 +12,11 @@ ModelImporter:
     100012: Sphere_001
     100014: Torus
     100016: Torus_001
+    100018: Camera
+    100020: Cylinder.001
+    100022: Lamp
+    100024: Sphere.001
+    100026: Torus.001
     400000: Cone
     400002: Cube
     400004: Cylinder
@@ -21,11 +26,18 @@ ModelImporter:
     400012: Sphere_001
     400014: Torus
     400016: Torus_001
+    400018: Camera
+    400020: Cylinder.001
+    400022: Lamp
+    400024: Sphere.001
+    400026: Torus.001
+    2000000: Camera
     2100000: End_pointy_thing
     2100002: Tip
     2100004: Handle
     2100006: Sharft
     2100008: Body
+    2100010: End pointy thing
     2300000: Cone
     2300002: Cube
     2300004: Cylinder
@@ -34,6 +46,9 @@ ModelImporter:
     2300010: Sphere_001
     2300012: Torus
     2300014: Torus_001
+    2300016: Cylinder.001
+    2300018: Sphere.001
+    2300020: Torus.001
     3300000: Cone
     3300002: Cube
     3300004: Cylinder
@@ -42,6 +57,9 @@ ModelImporter:
     3300010: Sphere_001
     3300012: Torus
     3300014: Torus_001
+    3300016: Cylinder.001
+    3300018: Sphere.001
+    3300020: Torus.001
     4300000: Torus
     4300002: Sphere
     4300004: Cone
@@ -50,8 +68,12 @@ ModelImporter:
     4300010: Cylinder
     4300012: Sphere_001
     4300014: Torus_001
+    4300016: Cylinder.001
+    4300018: Sphere.001
+    4300020: Torus.001
     7400000: Default Take
     9500000: //RootNode
+    10800000: Lamp
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
