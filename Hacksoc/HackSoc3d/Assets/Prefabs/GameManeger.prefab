@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8159654969593027072
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8159654969593027074}
+  - component: {fileID: 8159654969593027073}
+  - component: {fileID: 8159654969593027075}
+  - component: {fileID: 8619120645124863113}
+  m_Layer: 0
+  m_Name: GameManeger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8159654969593027074
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8159654969593027072}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 455.5, y: 310, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8159654969593027073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8159654969593027072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92cffe0a25dfa4e4a92d2fd8e836b084, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameOverCanvas: {fileID: 0}
+--- !u!114 &8159654969593027075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8159654969593027072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d25ccc70bed3fb439023a2e851f619d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minorEnemys:
+  - {fileID: 7815867746546796063, guid: c239991fb5fe2f349b49665a7c033971, type: 3}
+  - {fileID: 2063717300209827266, guid: ac36e7c6b7fde7442a9963c95417c9d5, type: 3}
+  Bosses: []
+  powerUps:
+  - {fileID: 8931003739669313663, guid: 6c75d8c3ac647f449a20843e4468e9ac, type: 3}
+  - {fileID: 6324541374491244677, guid: 152e175aff78262419559a377c19a853, type: 3}
+  - {fileID: 529514551080919762, guid: 1f20beb7cb410c4489b4a7477baccfa0, type: 3}
+--- !u!114 &8619120645124863113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8159654969593027072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 454878c160fcabb46ada51b7a0a919bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oneDoor: {fileID: 7361423651167970826, guid: c3da4b27778372a4a9c15f4011739f02, type: 3}
+  twoDoors: {fileID: 1702088713484832307, guid: 7a8f90114ba3123479f65e4817e89eec,
+    type: 3}
+  threeDoors: {fileID: 6150713432627880170, guid: 2a0e13974cac71f44bcb70f680e592a8,
+    type: 3}
+  fourDoors: {fileID: 4192904443178498660, guid: f320da6737e109444bd01d8ed01edb1c,
+    type: 3}
