@@ -6,7 +6,6 @@ public class GameController : MonoBehaviour
     public GameObject twoDoors;
     public GameObject threeDoors;
     public GameObject fourDoors;
-    public GameObject End;
 
     private System.Random rand;
     // Start is called before the first frame update
@@ -17,7 +16,7 @@ public class GameController : MonoBehaviour
         {
             if(i == 10)
             {
-                Instantiate(End, new Vector3(0, -4, 750), Quaternion.Euler(0, 180, 0));
+                Instantiate(oneDoor, new Vector3(0, -4, 750), Quaternion.Euler(0, 180, 0));
                 break;
             }
             int num = rand.Next(2, 5);

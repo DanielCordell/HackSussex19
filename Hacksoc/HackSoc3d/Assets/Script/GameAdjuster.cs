@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+
 public class GameAdjuster : MonoBehaviour
 {
     public List<string> commands = new List<string>();
-    public Text display;
+
     public Dictionary<string, int> commandCount = new Dictionary<string, int>();
 
     public List<string> names = new List<string>();
@@ -102,13 +102,6 @@ public class GameAdjuster : MonoBehaviour
         {
             currentTime -= Time.deltaTime * (1 / currentTimescale);
         }
-
-        display.text = ("slow: " + commandCount["slow"] + "\n" +
-            "fast: " + commandCount["fast"] + "\n" +
-             "Kill: " + commandCount["kill"] +"\t"+ currentTime.ToString() +
-              "powerup: " + commandCount["powerup"] + "\n" +
-               "bighead: " + commandCount["bighead"] +"\n"+
-               "enemy: " + commandCount["enemy"]);
     }
 
     void performAction(string action)
