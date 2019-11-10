@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class EnemyFollowController : MonoBehaviour
 {
     [Header("Target")]
     public GameObject player;
