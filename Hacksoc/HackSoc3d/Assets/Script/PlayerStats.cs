@@ -13,8 +13,10 @@ public  class PlayerStats : MonoBehaviour
     public static float playerSpeed;
 
     private GameObject healthBar;
+    private GameObject gameOver;
     [HideInInspector]
     public GameObject gun;
+
     // Start is called before the first frame update
 
     private float timeRemaining;
@@ -31,6 +33,7 @@ public  class PlayerStats : MonoBehaviour
     private void Start()
     {
         healthBar = GameObject.Find("HealthBarPlayer");
+        gameOver = GameObject.Find("GameManeger");
         if (gun == null)
         {
             gun = (GameObject)Instantiate(startingGun, transform.Find("GunSpawn").transform);
@@ -46,7 +49,8 @@ public  class PlayerStats : MonoBehaviour
             healthBar.GetComponent<HealthDisplay>().UpdateDisplay();
             if (health <= 0)
             {
-                Debug.Log("gameOver");
+                healthBar.SetActive(false);
+                gameOver.GetComponent<GameOver>().GameOverMethod();
             }
             beenHit = true;
             timeRemaining = iFrames;
