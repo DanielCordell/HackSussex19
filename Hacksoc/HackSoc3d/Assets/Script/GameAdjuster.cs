@@ -12,6 +12,9 @@ public class GameAdjuster : MonoBehaviour
 
     public List<string> phrases = new List<string>();
 
+    public GameObject ExplosionEffect;
+
+
     public float timeBetweenUpdates;
     private float currentTime;
     private float currentTimescale;
@@ -129,7 +132,9 @@ public class GameAdjuster : MonoBehaviour
 
                 foreach (int index in objs)
                 {
+                    GameObject effectObject = (GameObject)Instantiate(ExplosionEffect, found[index].transform.position, Quaternion.Euler(-90f,0f, 0f));
                     found[index].GetComponent<EnemyStats>().Die();
+                    Destroy(effectObject, 2f);
                 }
 
                 break;

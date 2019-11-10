@@ -61,4 +61,6 @@ MonoBehaviour:
   commands: []
   names: []
   phrases: []
-  timeBetweenUpdates: 20
+  ExplosionEffect: {fileID: 8703411520791353593, guid: 6e1640236b89f0246a69a37be9df4d0b,
+    type: 3}
+  timeBetweenUpdates: 10
