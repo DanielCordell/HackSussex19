@@ -6,22 +6,24 @@ public class EnemyBullet : MonoBehaviour
 {
     private float radius;
     private float projectileSpeed;
+    private Material material;
 
     Vector3 direction;
-    public Collider playerCollider;
+    public GameObject player;
 
     public GameObject ImpactEffect;
 
     void Start()
     {
-        playerCollider = GameObject.Find("Player").GetComponent<Collider>();
+        player = GameObject.Find("Player");
     } 
 
-    public void setStats(Vector3 _direction, float _radius, float _projectileSpeed, Material material)
+    public void setStats(Vector3 _direction, float _radius, float _projectileSpeed, Material _material)
     {
         direction = _direction;
         radius = _radius;
         projectileSpeed = _projectileSpeed;
+        material = _material;
         GetComponent<Renderer>().material = material;
     }
 
@@ -41,13 +43,11 @@ public class EnemyBullet : MonoBehaviour
             Physics.IgnoreCollision(gameObject.GetComponent<Collider>(), collision.collider, true);
         }
 
-
-
         if (collision.collider.tag == "Player")
         {
+            player.GetComponent<PlayerStats>().takeDamage();
             playEffect();
         }
-
 
         if(collision.collider.tag == "Wall")
         {
@@ -56,8 +56,9 @@ public class EnemyBullet : MonoBehaviour
 
 
         void playEffect(){
-            //GameObject effectObject = (GameObject)Instantiate(ImpactEffect, transform.position, Quaternion.Euler(0f,(int)direction*-1f, 0f));
-            //Destroy(effectObject, 2f);
+            GameObject effectObject = (GameObject)Instantiate(ImpactEffect, transform.position, Quaternion.Euler(0f,(int)direction.magnitude*-1f, 0f));
+            effectObject.GetComponent<Renderer>().material = material;
+            Destroy(effectObject, 2f);
             Destroy(gameObject);
             
         }
