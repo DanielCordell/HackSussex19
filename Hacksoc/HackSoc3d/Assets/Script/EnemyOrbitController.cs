@@ -2,17 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class EnemyOrbitController : MonoBehaviour
 {
     [Header("Target")]
-    private GameObject player;
+    public GameObject player;
 
     [HideInInspector]
     public float speed;
 
+    public float orbitDistanceMax;
+    public float orbitDistanceMin;
+
     void Start()
     {
-        player = GameObject.Find("Player");
         speed = gameObject.GetComponent<EnemyStats>().startingSpeed;
 
     }
@@ -21,7 +23,18 @@ public class EnemyMovement : MonoBehaviour
     {
         Vector3 dir = player.transform.position - transform.position;
         float distanceThisFrame = speed * Time.deltaTime;
-        transform.Translate(dir.normalized * distanceThisFrame, Space.World);
+        if (dir.magnitude > orbitDistanceMax)
+        {
+            transform.Translate(dir.normalized * distanceThisFrame, Space.World);
+        }
+        else if (dir.magnitude < orbitDistanceMin)
+        {
+            transform.Translate(-dir.normalized * distanceThisFrame, Space.World);
+        }
+        else
+        {
+            transform.RotateAround(player.transform.position, Vector3.up, distanceThisFrame/dir.magnitude * 100);
+        }
     }
 
     private void OnCollisionStay(Collision collision)
