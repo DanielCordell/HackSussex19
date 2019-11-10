@@ -12,11 +12,18 @@ public class EnemyOrbitController : MonoBehaviour
 
     public float orbitDistanceMax;
     public float orbitDistanceMin;
+    public float timeBetweenBullet;
+    private float currentTimeToBullet;
+
+    public GameObject bullet;
+
+    public Material material;
 
     void Start()
     {
         speed = gameObject.GetComponent<EnemyStats>().startingSpeed;
         player = GameObject.Find("Player");
+        currentTimeToBullet = timeBetweenBullet;
     }
     // Update is called once per frame
     void Update()
@@ -34,6 +41,15 @@ public class EnemyOrbitController : MonoBehaviour
         else
         {
             transform.RotateAround(player.transform.position, Vector3.up, distanceThisFrame/dir.magnitude * 100);
+            transform.LookAt(player.transform.position);
+            currentTimeToBullet -= Time.deltaTime;
+            if (currentTimeToBullet <= 0)
+            {        
+                currentTimeToBullet = timeBetweenBullet;
+                GameObject newBullet = (GameObject) Instantiate(bullet, transform.position, Quaternion.identity);
+                newBullet.transform.LookAt(player.transform.position);
+                newBullet.GetComponent<EnemyBullet>().setStats(transform.forward, 5, 30, material);
+            }
         }
     }
 

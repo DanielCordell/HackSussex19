@@ -464,6 +464,9 @@ MonoBehaviour:
   speed: 0
   orbitDistanceMax: 40
   orbitDistanceMin: 20
+  timeBetweenBullet: 0.5
+  bullet: {fileID: 6854620523167089905, guid: 252e1bc090283af4f88e76d1d0702701, type: 3}
+  material: {fileID: 2100000, guid: 07c63212aa79dc84f9ffde5eea3bcfcf, type: 2}
 --- !u!1 &2063717300289354783
 GameObject:
   m_ObjectHideFlags: 0
