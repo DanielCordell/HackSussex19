@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,6 +11,9 @@ public class GameAdjuster : MonoBehaviour
     public List<string> names = new List<string>();
 
     public List<string> phrases = new List<string>();
+
+    public GameObject ExplosionEffect;
+
 
     public float timeBetweenUpdates;
     private float currentTime;
@@ -30,9 +33,7 @@ public class GameAdjuster : MonoBehaviour
         commandCount["slow"] = 0;
         commandCount["fast"] = 0;
         commandCount["kill"] = 0;
-        commandCount["enemy"] = 0;
         commandCount["bighead"] = 0;
-        commandCount["powerup"] = 0;
         currentTime = timeBetweenUpdates;
         currentTimescale = 1.0f;
     }
@@ -41,8 +42,7 @@ public class GameAdjuster : MonoBehaviour
     {
         foreach (string command in commands)
         {
-            Debug.Log(command);
-            if (command == "slow" || command == "fast" || command == "powerup" || command == "kill" || command == "enemy" || command == "bighead") 
+            if (command == "slow" || command == "fast" || command == "kill" || command == "bighead") 
                 commandCount[command]++;
             else if (command.Contains(" "))
             {
@@ -63,7 +63,6 @@ public class GameAdjuster : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(currentTime);
         if (currentTime <= 0)
         {
             // Revert previous thing if it was a timecale:
@@ -136,14 +135,11 @@ public class GameAdjuster : MonoBehaviour
 
                 foreach (int index in objs)
                 {
+                    GameObject effectObject = (GameObject)Instantiate(ExplosionEffect, found[index].transform.position, Quaternion.Euler(-90f,0f, 0f));
                     found[index].GetComponent<EnemyStats>().Die();
+                    Destroy(effectObject, 2f);
                 }
 
-                break;
-            case "enemy":
-                var foundSpawners = FindObjectsOfType<EnemyStats>();
-                break;
-            case "powerup":
                 break;
             case "bighead":
                 Debug.Log("BIGHEAD");
