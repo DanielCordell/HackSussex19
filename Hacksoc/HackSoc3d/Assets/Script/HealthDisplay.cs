@@ -21,7 +21,6 @@ public class HealthDisplay : MonoBehaviour
         for(int i = 0; i< currentHealth; i++)
         {
             healthBoxes.Add(Instantiate(healthBoxPrefab, transform));
-            Debug.Log("test:" + healthBoxes.Count);
         }
     }
 
@@ -31,7 +30,7 @@ public class HealthDisplay : MonoBehaviour
         int i = currentHealth-1;
         foreach (GameObject boxTochange in healthBoxes)
         {
-            if(i< 0)
+            if (i< 0)
             {
                 boxTochange.transform.Find("Image").GetComponent<Image>().color = noHealth;
             }

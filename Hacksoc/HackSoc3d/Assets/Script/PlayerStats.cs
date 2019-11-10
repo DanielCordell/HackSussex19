@@ -7,11 +7,14 @@ public  class PlayerStats : MonoBehaviour
 
     public int startHealth = 3;
     public float iFrames = 10f;
+    public GameObject startingGun;
     [HideInInspector]
     public static int health;
     public static float playerSpeed;
 
     private GameObject healthBar;
+    [HideInInspector]
+    public GameObject gun;
     // Start is called before the first frame update
 
     private float timeRemaining;
@@ -21,17 +24,24 @@ public  class PlayerStats : MonoBehaviour
     {
         health = startHealth;
         beenHit = false;
-        healthBar = GameObject.Find("HealthBarPlayer");
+
     }
 
+    private void Start()
+    {
+        healthBar = GameObject.Find("HealthBarPlayer");
+        if (gun == null)
+        {
+            gun = (GameObject)Instantiate(startingGun, transform.Find("GunSpawn").transform);
+
+        }
+    }
     // Update is called once per frame
     public void takeDamage(int damage = 1)
     {
-
         if (!beenHit)
         {
             health -= damage;
-            Debug.Log("take damge");
             healthBar.GetComponent<HealthDisplay>().UpdateDisplay();
             if (health <= 0)
             {
@@ -56,4 +66,5 @@ public  class PlayerStats : MonoBehaviour
             timeRemaining -= Time.deltaTime;
         }
     }
+
 }

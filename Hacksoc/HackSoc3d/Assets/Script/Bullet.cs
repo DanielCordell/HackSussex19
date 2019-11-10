@@ -5,16 +5,22 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
 
-    public float baseSpeed = 50f;
-    public float baseDamage = 10f;
+    private float fireRate;
+    private float damage;
+    private float radius;
+    private float projectileSpeed;
+
     PlayerShoot.Direction direction;
     public Collider playerCollider;
 
     public GameObject ImpactEffect;
 
-    public void getDirection(PlayerShoot.Direction _direction)
+    public void getgunStats(PlayerShoot.Direction _direction, float _damage, float _radius, float _projectileSpeed)
     {
         direction = _direction;
+        damage = _damage;
+        radius = _radius;
+        projectileSpeed = _projectileSpeed;
     }
 
     private void FixedUpdate()
@@ -45,7 +51,7 @@ public class Bullet : MonoBehaviour
             velocity += Vector3.back * Time.deltaTime;
         }
 
-        GetComponent<Rigidbody>().velocity = velocity.normalized * baseSpeed;
+        GetComponent<Rigidbody>().velocity = velocity.normalized * projectileSpeed;
     }
 
 
@@ -61,7 +67,7 @@ public class Bullet : MonoBehaviour
 
         if (collision.collider.tag == "Enemy")
         {
-            collision.collider.GetComponent<EnemyStats>().takeDamage(baseDamage);
+            collision.collider.GetComponent<EnemyStats>().takeDamage(damage);
             playEffect();
         }
 

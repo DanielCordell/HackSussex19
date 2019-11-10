@@ -5,13 +5,14 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     [Header("Target")]
-    public GameObject player;
+    private GameObject player;
 
     [HideInInspector]
     public float speed;
 
     void Start()
     {
+        player = GameObject.Find("Player");
         speed = gameObject.GetComponent<EnemyStats>().startingSpeed;
 
     }
