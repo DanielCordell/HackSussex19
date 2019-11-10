@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52e5006e09f4cb241800bd33e6cf8938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerUp: {fileID: 0}
+  powerUp: {fileID: 1588624907}
 --- !u!65 &232260635
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5206,7 +5206,7 @@ PrefabInstance:
     - target: {fileID: 7361423651167970825, guid: c3da4b27778372a4a9c15f4011739f02,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 7361423651167970825, guid: c3da4b27778372a4a9c15f4011739f02,
         type: 3}
@@ -5334,6 +5334,12 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: aabbcaf3f81e6df43a60cf57d9ee0613, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82d53bb3a3a93444f8cae8c7444e1bff, type: 3}
+--- !u!1 &1588624907 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8284630534285854129, guid: 82d53bb3a3a93444f8cae8c7444e1bff,
+    type: 3}
+  m_PrefabInstance: {fileID: 1578847060}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1730108571
 PrefabInstance:
   m_ObjectHideFlags: 0
