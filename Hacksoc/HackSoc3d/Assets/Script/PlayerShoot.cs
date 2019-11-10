@@ -15,7 +15,6 @@ public class PlayerShoot : MonoBehaviour
 
 
     public float rateOfFire = 1f;
-    public GameObject bulletPrefab;
     // Start is called before the first frame update
      Direction ShootDirection;
 
@@ -31,6 +30,7 @@ public class PlayerShoot : MonoBehaviour
             ShootDirection = Direction.UP;
             transform.rotation = Quaternion.Euler(0f,0f,0f);
             Shoot();
+            return;
         }
 
         if (Input.GetKey(KeyCode.DownArrow))  // If the player is pressing the "d" key
@@ -38,6 +38,7 @@ public class PlayerShoot : MonoBehaviour
             ShootDirection = Direction.DOWN;
             transform.rotation = Quaternion.Euler(0f, 180f, 0f);
             Shoot();
+            return;
         }
 
         if (Input.GetKey(KeyCode.LeftArrow))  // If the player is pressing the "d" key
@@ -45,6 +46,7 @@ public class PlayerShoot : MonoBehaviour
             ShootDirection = Direction.LEFT;
             transform.rotation = Quaternion.Euler(0f, 270f, 0f);
             Shoot();
+            return;
         }
 
         if (Input.GetKey(KeyCode.RightArrow))  // If the player is pressing the "d" key
@@ -52,6 +54,7 @@ public class PlayerShoot : MonoBehaviour
             ShootDirection = Direction.RIGHT;
             transform.rotation = Quaternion.Euler(0f, 90f, 0f);
             Shoot();
+            return;
 
 
         }
