@@ -7,14 +7,14 @@ public class PowerUp : MonoBehaviour
 
     public GameObject powerUp;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("hello");
-        if(collision.gameObject.tag == "Player")
+
+        if(other.gameObject.tag == "Player")
         {
 
-           collision.gameObject.GetComponent<PlayerStats>().PowerUpPickUp(powerUp);
-            Destroy(gameObject);
+           other.gameObject.GetComponent<PlayerStats>().PowerUpPickUp(powerUp);
+           Destroy(gameObject);
         }
     }
 
